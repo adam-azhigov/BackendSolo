@@ -1,11 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose')
-const cors = require('cors')
 const morgan = require('morgan')
 
 const router = require('./routes/index')
 
-
+const cors = require('cors')
 
 
 const app = express()

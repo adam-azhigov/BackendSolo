@@ -1,11 +1,21 @@
 const Status = require("../models/Status.model");
 
-const statusControllers = {
+module.exports.statusControllers = {
+  getStatus: async (req, res) => {
+    try {
+      const allStatus = await Status.find({});
+      res.status(201).json(allStatus);
+    } catch (e) {
+      res.json(e.message);
+    }
+  },
+
   postStatus: async (req, res) => {
     try {
+      const {title, color} = req.body
       const newPatient = new Status({
-        title: req.body.title,
-        color: req.body.color,
+        title,
+        color
       });
       await newPatient.save();
       res.json(newPatient);
@@ -15,4 +25,4 @@ const statusControllers = {
   },
 };
 
-module.exports = statusControllers;
+

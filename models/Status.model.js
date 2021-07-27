@@ -3,18 +3,18 @@ const { Schema, model } = require("mongoose");
 const statusSchema = new Schema(
   {
     title: {
-      type:String,
+      type: String,
       required: true,
-      unique: true
+      unique: true,
     },
     color: {
       type: String,
-      default: "red"
+      default: "red",
     },
   },
   { timestamps: true }
 );
 
-const Status = model('Status', statusSchema)
+const Status = model("Status", statusSchema);
 
 module.exports = Status;

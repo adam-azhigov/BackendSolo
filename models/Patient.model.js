@@ -1,22 +1,22 @@
-const { Schema, model, } = require("mongoose");
+const { Schema, model } = require("mongoose");
 
 const patientSchema = new Schema(
   {
     name: {
-      type:String,
-      required: true
+      type: String,
+      required: true,
     },
     pathToImage: {
       type: String,
-      required: true
+      required: true,
     },
-    comment : {
+    comment: {
       ref: "comment",
       type: Schema.Types.ObjectId,
-    }
+    },
   },
   { timestamps: true }
 );
-const Patient = model("Patient", patientSchema)
+const Patient = model("Patient", patientSchema);
 
-module.exports = Patient
+module.exports = Patient;

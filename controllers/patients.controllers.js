@@ -1,6 +1,7 @@
 const Patient = require("../models/Patient.model");
 
-const patientControllers = {
+module.exports.patientControllers = {
+
   getAllPatients: async (req, res) => {
     try {
       const allPatient = await Patient.aggregate([
@@ -39,27 +40,29 @@ const patientControllers = {
       ]);
       res.json(allPatient);
     } catch (e) {
-      console.log(e.message);
+      res.json(e.message);
     }
   },
 
   getPatientId: async (req, res) => {
     try {
-      const allPatient = await Patient.find({
-        _id: req.params.id,
+      const {id} = req.params
+      const allPatient = await Patient.findById({
+        _id: id
       });
       res.json(allPatient);
     } catch (e) {
-      console.log(e.message);
+      res.json(e.message);
     }
   },
 
   deletePatientId: async (req, res) => {
     try {
+      const {id} = req.params
       const allPatient = await Patient.findByIdAndDelete({
-        _id: req.params.id,
+        _id: id,
       });
-      res.json('пациент удален');
+      res.status(200).json(allPatient);
     } catch (e) {
       res.json(e.message);
     }
@@ -67,16 +70,17 @@ const patientControllers = {
 
   postPatient: async (req, res) => {
     try {
+      const {name, pathToImage} = req.body
       const newPatient = await new Patient({
-        name: req.body.name,
-        pathToImage: req.body.pathToImage,
+        name,
+        pathToImage,
       });
       await newPatient.save();
-      res.json(newPatient);
+      res.status(200).json(newPatient);
     } catch (e) {
-      console.log(e.message);
+      res.json(e.message);
     }
   },
 };
 
-module.exports = patientControllers;
+

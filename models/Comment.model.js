@@ -4,7 +4,7 @@ const commentSchema = new Schema(
   {
     text: {
       type: String,
-      required: true
+      required: true,
     },
     status: {
       ref: "Status",
@@ -14,11 +14,10 @@ const commentSchema = new Schema(
       ref: "Patient",
       type: Schema.Types.ObjectId,
     },
-
   },
   { timestamps: true }
 );
 
-const Comment = model("Comment", commentSchema)
+const Comment = model("Comment", commentSchema);
 
-module.exports = Comment
+module.exports = Comment;
