@@ -83,7 +83,7 @@ export const loadPatients = () => {
   return async (dispatch) => {
     dispatch({ type: "patients/load/pending" });
 
-    const response = await fetch("/patients");
+    const response = await fetch("/api/patients");
     const json = await response.json();
 
     dispatch({
