@@ -5,9 +5,9 @@ const router = Router();
 
 
 
-router.get("/patients", patientControllers.getAllPatients); // вывод  всех пациентов
-router.get('/patient/:id', patientControllers.getPatientId)
-router.post("/patient", patientControllers.postPatient); // добавить пациента
-router.delete("/patient/:id", patientControllers.deletePatientId); // удаление пациена по ид
+router.get("/api/patients", patientControllers.getAllPatients); // вывод  всех пациентов
+router.get('/api/patient/:id', patientControllers.getPatientId)
+router.post("/api/patient", patientControllers.postPatient); // добавить пациента
+router.delete("/api/patient/:id", patientControllers.deletePatientId); // удаление пациена по ид
 
 module.exports = router;

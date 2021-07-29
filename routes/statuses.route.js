@@ -4,7 +4,7 @@ const router = Router();
 
 const { statusControllers } = require("../controllers/statuses.controllers");
 
-router.post('/status', statusControllers.postStatus);
-router.get('/status', statusControllers.getStatus)
+router.post('/api/status', statusControllers.postStatus);
+router.get('/api/status', statusControllers.getStatus)
 
 module.exports = router;
