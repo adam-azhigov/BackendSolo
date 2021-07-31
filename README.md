@@ -23,5 +23,5 @@
 
 **После набрать команду:**      
 
-npx nodemon   gti   
+npx run dev 
 
