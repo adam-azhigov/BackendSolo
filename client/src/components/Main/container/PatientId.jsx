@@ -179,20 +179,6 @@ function PatientId() {
           })}
         </Table>
       </div>
-
-      {/*{comments.map((item) => {*/}
-      {/*  return (*/}
-      {/*    <div className={classes.divTable}>*/}
-      {/*      <div>{item.title}</div>*/}
-      {/*      <div>{item.text}</div>*/}
-      {/*      <div>*/}
-      {/*        <button className={classes.commentBtn}>*/}
-      {/*          <HiPencilAlt />*/}
-      {/*        </button>*/}
-      {/*      </div>*/}
-      {/*    </div>*/}
-      {/*  );*/}
-      {/*})}*/}
     </main>
   );
 }
