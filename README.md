@@ -4,7 +4,7 @@
 
 ![](https://github.com/adam-azhigov/BackendSolo/blob/main/%D0%93%D0%B8%D1%84%D0%BA%D0%B0%20%D1%81%D0%B0%D0%B9%D1%82%D0%B0.gif)    
 
-### - Сольный проект ### 
+###  Сольный проект ### 
  > [деплой на heroku](https://deploy-mern-hospital.herokuapp.com/)
 
 ### Функционал  сайта
